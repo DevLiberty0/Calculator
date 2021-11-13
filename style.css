@@ -1,27 +1,29 @@
 body {
     margin: 0;
     font-family: arial;
-    background-image: url(https://www.ivyboost.com/wp-content/uploads/2018/04/math-wallpaper-45742-46995-hd-wallpapers-1024x640.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 95vh;
+    background-image: radial-gradient(closest-side at 50% 93%,rgb(46, 46, 46) 20%, 
+                                                              rgb(121, 121, 121) 50%, 
+                                                              rgb(170, 170, 170) 80%);
 }
 
 
 #calc {
     position: relative;
     margin: auto;
-    margin-top: 3vh;
+    margin-top: 5vh;
     width: 50vh;
-    height: 84vh;
+    height: 80vh;
     padding: 5vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 2fr repeat(5, 1fr);
     gap: 2vh;
     border-radius: 8px;
-    box-shadow: inset gray 3px 3px 10px, inset black -3px -3px 10px;
-    background-color: rgb(22, 22, 22);
+    box-shadow: inset rgb(146, 146, 146) 0 2px 1px, 
+                inset black -3px 0 1px, 
+                inset black 3px -3px 1px;
+    background-color: rgb(19, 19, 19);
     overflow: hidden;
 }
 #calc::before {
@@ -30,7 +32,7 @@ body {
     top: -40vh;
     width: 200%;
     height: 50%;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.411) 40%, rgba(255, 255, 255, 0) 70%);
     transform:  scale(2) rotate(45deg);
     
 }
@@ -61,24 +63,29 @@ p {
     width: 100%;
     height: 100%;
     border-radius: 8px;
-    background: linear-gradient(rgb(0, 0, 0), rgb(37, 37, 37));
+    background: linear-gradient(rgb(0, 0, 0) 50%, rgb(37, 37, 37) 60%);
+    box-shadow: black 0 var(--shadow, 3px) 1px;
     justify-content: center;
     align-items: center;
+    transition:linear(scale, box-shadow);
+    transition-duration: 50ms;
 }
-.btn::after {
+.btn:after {
     content: " ";
     position: absolute;
     top: 0;
-    width: 95%;
-    height: 40%;
+    width: 90%;
+    height: var(--height, 40%);
     border-radius: 8px;
-    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(rgba(255, 255, 255, 0.418), rgba(255, 255, 255, 0));
+    transition: linear(height);
+    transition-duration: 50ms;
 }
 
 #clear {
     grid-column: 1;
     grid-row: 2;
-    background: linear-gradient(rgb(192, 1, 1), rgb(224, 0, 0));}
+    background: linear-gradient(rgb(190, 0, 0) 50%, rgb(255, 0, 0) 60%);}
 #bkspc {
     grid-column: 2;
     grid-row: 2;}
@@ -97,7 +104,7 @@ p {
 #add {
     grid-column: 4;
     grid-row: 5 / 7;
-    background: linear-gradient(rgb(0, 139, 19), rgb(0, 180, 24));}
+    background: linear-gradient(rgb(0, 139, 19) 50%, rgb(0, 206, 27) 60%);}
 #equal {
     grid-column: 3;
     grid-row: 6;}
