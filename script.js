@@ -60,21 +60,6 @@ function calc(char, obj) {
     }
     keyCalc = 1;
     screen.style.setProperty("--cont", `"${calcType}"`);
-    // if(num1) {
-    //     (!keyCalc) ? num2 = screen.textContent : false;
-    //     num1 = eval(num1 + calcType + num2);
-    //     screen.textContent = num1;
-    // } 
-    // else {
-    //     num1 = screen.textContent;
-    // }
-    // if(char == 61) {
-    //     num2 = 0;
-    // }
-    // else {
-    //     calcType = obj.getAttribute("value");
-    // }
-    // keyCalc = 1;
 }
 
 function btnDown() {
@@ -96,7 +81,7 @@ function btnUp() {
     this.style.textShadow = ""
     this.style.setProperty("--shadow", "3px");
 }
-
+console.log(screen.textContent);
 for(x=0; x<buttons.length; x++) {
     buttons[x].onmousedown = btnDown;
     buttons[x].onmouseup = btnUp;
