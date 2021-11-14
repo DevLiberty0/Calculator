@@ -43,30 +43,35 @@ body {
 }
 
 #screen {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
     grid-column: 1/5;
     grid-row: 1/2;
     margin: auto;
-    padding-top: 1%;
     width: 95%;
     height: 50%;
-    align-self: end;
     border-radius: 5px;
     box-shadow: inset black 0 0 5px, rgba(255, 255, 255, 0.534) 0 2px 1px, rgba(0, 0, 0, 0.61) 0 -1px 1px 3px;
     background-color: rgb(192, 216, 195);
     z-index: 2;
     font-size: 11vh;
     font-family: "calcFont";
-    text-align: end;
+    align-items: center;
     color: rgb(27, 27, 27);
 }
 
 #screen:after {
+    order: -1;
     content: var(--cont, "");
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-top: 1%;
+    display: block;
+    margin: 0;
+}
+
+#screenContent {
+    font-size: 11vh;
+    display: block;
+    margin: 0;
+    align-self: flex-end;
 }
 
 p {

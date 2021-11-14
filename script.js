@@ -56,7 +56,7 @@ function calc(char, obj) {
         num = screen.textContent;
     }
     if(screen.textContent.length > 8) {
-        screen.textContent = screen.textContent.substring(0,9);
+        screen.textContent = screen.textContent.substring(0,8);
     }
     keyCalc = 1;
     screen.style.setProperty("--cont", `"${calcType}"`);
